@@ -63,6 +63,7 @@ body::before {
 .story-section,
 .programs-section,
 .gallery-section,
+.photo-wall-section,
 .quote-section,
 .footer {
   position: relative;
@@ -77,6 +78,7 @@ body::before {
 .story-section,
 .programs-section,
 .gallery-section,
+.photo-wall-section,
 .footer {
   background: var(--panel);
 }
@@ -303,6 +305,7 @@ h3 {
 .story-section,
 .programs-section,
 .gallery-section,
+.photo-wall-section,
 .quote-section {
   margin-bottom: 1.5rem;
 }
@@ -310,6 +313,7 @@ h3 {
 .story-section,
 .programs-section,
 .gallery-section,
+.photo-wall-section,
 .footer {
   padding: 1.5rem;
 }
@@ -393,6 +397,39 @@ h3 {
   margin-bottom: 0;
 }
 
+.photo-wall {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.photo-tile {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.photo-tile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.photo-tile-tall img {
+  aspect-ratio: 4 / 5.2;
+  object-position: center top;
+}
+
+.photo-tile figcaption {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
 .program-tag {
   display: inline-block;
   margin-bottom: 1rem;
@@ -442,6 +479,7 @@ h3 {
   .story-layout,
   .program-grid,
   .gallery-layout,
+  .photo-wall,
   .footer {
     grid-template-columns: 1fr;
     flex-direction: column;
